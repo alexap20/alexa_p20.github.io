@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<input type="text" id="valueA">Height<br/>
+<input type="text" id="valueB">Base Length<br/>
+<input type="text" id="valueD">2nd Base Length (for trapreziods)<br/>
+
+<button onclick="
+doParallelograms(
+document.getElementById('valueA').value,
+document.getElementById('valueB').value
+)">Parellograms</button>
+
+<button onclick="
+doTriangles(
+document.getElementById('valueA').value,
+document.getElementById('valueB').value
+)">Triangle</button>
+
+<button onclick="
+doTrapezoids(
+document.getElementById('valueA').value,
+document.getElementById('valueB').value,
+document.getElementById('valueD').value
+)">Trapezoids</button>
+
+<p id="putHere"></p>
+<script>
+
+function doParallelograms(a,b){
+var a = parseInt(a);
+var b = parseInt(b);
+var c = a*b;
+document.getElementById('putHere').innerHTML = c;
+}
+function doTriangles(a,b){
+var a = parseInt(a);
+var b = parseInt(b);
+var c = 1/2*a*b;
+document.getElementById('putHere').innerHTML = c;
+}
+function doTrapezoids(valueA,valueB,valueD){
+let a = Number(valueA);
+let b = Number(valueB);
+let d = Number(valueD);
+let c = 1/2*b + 1/2*d
+let sum = c*a
+
+document.getElementById('putHere').innerHTML = sum;
+}
+
+
+</script>
+
+<a href="code.html">Basic Calculations</a>
+
+</body>
+</html>

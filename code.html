@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript</title>
+</head>
+<body>
+
+
+
+
+
+
+<input type="text" id="valueA"><br/>
+<input type="text" id="valueB"><br/>
+
+<button onclick="
+doThings(
+document.getElementById('valueA').value,
+document.getElementById('valueB').value
+)">Add</button>
+
+<button onclick="
+subtractThings(
+document.getElementById('valueA').value,
+document.getElementById('valueB').value
+)">subtract</button>
+
+<button onclick="
+multiplyThings(
+document.getElementById('valueA').value,
+document.getElementById('valueB').value
+)">Multiply</button>
+
+<button onclick="
+devideThings(
+document.getElementById('valueA').value,
+document.getElementById('valueB').value
+)">Devide</button>
+
+
+<p id="putThere"></p>
+
+<script>
+
+function doThings(a,b){
+var a = parseInt(a);
+var b = parseInt(b);
+var c = a + b;
+document.getElementById('putThere').innerHTML = c;
+}
+
+function subtractThings(a,b){
+var a = parseInt(a);
+var b = parseInt(b);
+var c = a - b;
+document.getElementById('putThere').innerHTML = c;
+}
+
+function multiplyThings(a,b){
+var a = parseInt(a);
+var b = parseInt(b);
+var c = a*b;
+document.getElementById('putThere').innerHTML = c;
+}
+
+function devideThings(a,b){
+var a = parseInt(a);
+var b = parseInt(b);
+var c = a/b;
+document.getElementById('putThere').innerHTML = c;
+}
+</script>
+
+<a href="page2.html">Find Area of Shape</a>
+
+</body>
+</html>
